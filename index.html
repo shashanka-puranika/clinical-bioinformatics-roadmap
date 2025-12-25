@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clinical Bioinformatics Mastery - 90-Day Learning Roadmap with Free Resources">
+    <meta name="keywords" content="bioinformatics, genomics, machine learning, NGS, clinical">
+    <meta name="author" content="Clinical Bioinformatics Community">
+    <meta property="og:title" content="Clinical Bioinformatics Roadmap - 90 Days to Mastery">
+    <meta property="og:description" content="Complete learning path for clinical bioinformatics engineering">
+    <meta property="og:type" content="website">
+    
+    <title>Clinical Bioinformatics Roadmap - 90-Day Mastery</title>
+    
+    <!-- Main Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <!-- SIDEBAR NAVIGATION -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-title">🧬 Clinical Bioinformatics</div>
+                <div class="sidebar-subtitle">90-Day Roadmap</div>
+                <button class="sidebar-toggle" onclick="toggleSidebar()" aria-label="Toggle sidebar">
+                    <span></span>
+                </button>
+            </div>
+
+            <div class="sidebar-search">
+                <input type="text" id="searchInput" placeholder="Search weeks..." 
+                       onkeyup="filterWeeks(this.value)" aria-label="Search weeks">
+            </div>
+
+            <div class="sidebar-filters">
+                <select id="phaseFilter" onchange="filterByPhase(this.value)" aria-label="Filter by phase">
+                    <option value="">All Phases</option>
+                    <option value="phase1">Phase 1: Foundations</option>
+                    <option value="phase2">Phase 2: Genomics Core</option>
+                    <option value="phase3">Phase 3: ML</option>
+                    <option value="phase4">Phase 4: Cloud & DevOps</option>
+                    <option value="phase5">Phase 5: Advanced</option>
+                </select>
+            </div>
+
+            <nav class="sidebar-nav" id="sidebarNav">
+                <!-- Dynamically populated by JavaScript -->
+            </nav>
+        </aside>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="main">
+            <!-- TOP HEADER -->
+            <header class="header" id="header">
+                <div class="header-left">
+                    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+                    <div>
+                        <h1 class="header-title" id="pageTitle">Week 1: Python Fundamentals</h1>
+                        <p class="header-subtitle" id="pageSubtitle">Variables, data structures, control flow, OOP, NumPy arrays</p>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="progress-section">
+                        <div class="progress-label">
+                            <span id="completedCount">0</span>/<span id="totalCount">26</span> Weeks
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+                        🌙
+                    </button>
+                </div>
+            </header>
+
+            <!-- STATISTICS CARDS -->
+            <section class="stats-section">
+                <div class="stat-card">
+                    <div class="stat-icon">📚</div>
+                    <div class="stat-value" id="weeksComplete">0</div>
+                    <div class="stat-label">Weeks Complete</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">✓</div>
+                    <div class="stat-value" id="tasksComplete">0</div>
+                    <div class="stat-label">Tasks Complete</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⏱️</div>
+                    <div class="stat-value">90</div>
+                    <div class="stat-label">Days to Mastery</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🔗</div>
+                    <div class="stat-value">100+</div>
+                    <div class="stat-label">Free Resources</div>
+                </div>
+            </section>
+
+            <!-- MAIN CONTENT AREA -->
+            <section class="content" id="weekContent">
+                <!-- Week content dynamically loaded here -->
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="footer">
+                <div class="footer-content">
+                    <p>&copy; 2025 Clinical Bioinformatics Roadmap. MIT License.</p>
+                    <div class="footer-links">
+                        <a href="pages/about.html">About</a>
+                        <a href="pages/resources.html">Resources</a>
+                        <a href="pages/contribute.html">Contribute</a>
+                        <a href="https://github.com/yourusername/clinical-bioinformatics-roadmap" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Loading State -->
+    <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/weeks-data.js"></script>
+    <script src="js/state.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
